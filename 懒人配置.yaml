@@ -31,7 +31,7 @@ dns:
     - https://223.5.5.5/dns-query
   forward:
   - proxy_rule_set:
-      match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/ChinaMaxNoIP_All.yaml
+      match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/China.yaml
       value: 国内
       disabled: false
   - proxy_rule_set:
@@ -77,7 +77,9 @@ policy_groups:
     policies: []
     flatten: false
     filter: (?i)^(?!.*(群|邀请|返利|循环|官网|过滤|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|好友|失联|\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)\d*\b|\d{4}-\d{2}-\d{2}|\dG)).+$
-    urls: []
+    urls:
+    - https://103.14.76.98/sub/fsc/1bdaa76db088f12e753e28c4185e8221
+    - https://xn--9kqs1lo79d.cc/api/v1/chuixue?token=8c2977adc95b16584e4420777328b160
     update_interval: 86400
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png
     hidden: false
@@ -118,7 +120,8 @@ policy_groups:
     policies:
     - 我的订阅
     flatten: true
-    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b)).*(🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(US|USA|United States)\d*\b)
+    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b)).*(🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(US|USA|United
+      States)\d*\b)
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
     hidden: true
 - select:
@@ -166,7 +169,8 @@ policy_groups:
     policies:
     - 我的订阅
     flatten: true
-    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b|家宽|住宅|residential|家庭|家用)).*(🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(US|USA|United States)\d*\b)
+    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b|家宽|住宅|residential|家庭|家用)).*(🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(US|USA|United
+      States)\d*\b)
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
     hidden: true
 - smart:
@@ -214,7 +218,8 @@ policy_groups:
     policies:
     - 我的订阅
     flatten: true
-    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b))(?=.*(家宽|住宅|residential|家庭|家用)).*(🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(US|USA|United States)\d*\b)
+    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b))(?=.*(家宽|住宅|residential|家庭|家用)).*(🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(US|USA|United
+      States)\d*\b)
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
     hidden: true
 - smart:
@@ -259,7 +264,7 @@ rules:
 - rule_set:
     name: Twitter
     match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/Twitter.yaml
-    policy: 香港智能优选
+    policy: 美国智能优选
     update_interval: 86400
     disabled: false
 - rule_set:
@@ -317,22 +322,27 @@ rules:
     update_interval: 86400
     disabled: false
 - rule_set:
-    name: ChinaMaxNoIP_All
-    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/ChinaMaxNoIP_All.yaml
+    name: China
+    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/China.yaml
     policy: DIRECT
     update_interval: 86400
     disabled: false
 - rule_set:
-    name: LAN_SPLITTER
-    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/KeleeOne/LAN_SPLITTER.lsr
+    name: 内网
+    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/内网.yaml
     policy: DIRECT
     update_interval: 86400
     disabled: false
+- domain_suffix:
+    match: cn
+    policy: DIRECT
 - geoip:
     match: CN
     policy: DIRECT
 - default:
     policy: 兜底后备策略
+mitm:
+  ca_passphrase: egern
 modules:
 - url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
   enabled: true
