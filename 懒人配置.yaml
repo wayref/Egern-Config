@@ -224,23 +224,6 @@ policy_groups:
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/X.png
     hidden: false
 - select:
-    name: GitHub
-    policies:
-    - 香港智能优选
-    - 台湾智能优选
-    - 美国智能优选
-    - 新国智能优选
-    - 日本智能优选
-    - 韩国智能优选
-    - 香港智能家宽
-    - 台湾智能家宽
-    - 美国智能家宽
-    - 新国智能家宽
-    - 日本智能家宽
-    - 韩国智能家宽
-    icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/GitHub.png
-    hidden: false
-- select:
     name: 国外网盘
     policies:
     - 香港智能优选
@@ -256,6 +239,23 @@ policy_groups:
     - 日本智能家宽
     - 韩国智能家宽
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/TencentCloud.png
+    hidden: false
+- select:
+    name: Microsoft
+    policies:
+    - 香港智能优选
+    - 台湾智能优选
+    - 美国智能优选
+    - 新国智能优选
+    - 日本智能优选
+    - 韩国智能优选
+    - 香港智能家宽
+    - 台湾智能家宽
+    - 美国智能家宽
+    - 新国智能家宽
+    - 日本智能家宽
+    - 韩国智能家宽
+    icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/Microsoft.png
     hidden: false
 - select:
     name: 香港手动策略
@@ -454,9 +454,9 @@ rules:
     update_interval: 86400
     disabled: false
 - rule_set:
-    name: GitHub
-    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/GitHub.yaml
-    policy: GitHub
+    name: Microsoft
+    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Microsoft.yaml
+    policy: Microsoft
     update_interval: 86400
     disabled: false
 - rule_set:
