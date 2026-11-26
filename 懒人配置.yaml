@@ -270,7 +270,7 @@ policy_groups:
     policies:
     - 我的订阅
     flatten: true
-    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b)).*(🇹🇼|台湾|\b(TW|TWN|Tai|Taiwan)\d*\b)
+    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b)).*( 🇨🇳|台湾|\b(TW|TWN|Tai|Taiwan)\d*\b)
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/TW.png
     hidden: true
 - select:
@@ -319,7 +319,7 @@ policy_groups:
     policies:
     - 我的订阅
     flatten: true
-    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b|家宽|住宅|家庭|家用|原生|ISP|商宽|静态|动态|独享|IPLC|IEPL|专线)).*(🇹🇼|台湾|\b(TW|TWN|Tai|Taiwan)\d*\b)
+    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b|家宽|住宅|家庭|家用|原生|ISP|商宽|静态|动态|独享|IPLC|IEPL|专线)).*( 🇨🇳|台湾|\b(TW|TWN|Tai|Taiwan)\d*\b)
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/TW.png
     hidden: true
 - smart:
@@ -368,7 +368,7 @@ policy_groups:
     policies:
     - 我的订阅
     flatten: true
-    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b))(?=.*(家宽|住宅|家庭|家用|原生|ISP|商宽|静态|动态|独享|IPLC|IEPL|专线)).*(🇹🇼|台湾|\b(TW|TWN|Tai|Taiwan)\d*\b)
+    filter: (?i)^(?!.*(回国|校园|游戏|🎮|\bGAME\b))(?=.*(家宽|住宅|家庭|家用|原生|ISP|商宽|静态|动态|独享|IPLC|IEPL|专线)).*( 🇨🇳|台湾|\b(TW|TWN|Tai|Taiwan)\d*\b)
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/TW.png
     hidden: true
 - smart:
