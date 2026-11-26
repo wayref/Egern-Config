@@ -99,7 +99,7 @@ policy_groups:
     name: 我的订阅
     policies: []
     flatten: false
-    filter: (?i)^(?!.*(群|邀请|返利|循环|官网|过滤|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|好友|失联|\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)\d*\b|\d{4}-\d{2}-\d{2}|\dG)).+$
+    filter: (?i)^(?!.*(群|邀请|返利|建议|循环|官网|过滤|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|福利|好友|失联|\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)\d*\b|\d{4}-\d{2}-\d{2}|\dG)).+$
     urls: []
     update_interval: 86400
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/China.png
@@ -120,6 +120,23 @@ policy_groups:
     - 日本智能家宽
     - 韩国智能家宽
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/OpenAI.png
+    hidden: false
+- select:
+    name: Meta
+    policies:
+    - 香港智能优选
+    - 台湾智能优选
+    - 美国智能优选
+    - 新国智能优选
+    - 日本智能优选
+    - 韩国智能优选
+    - 香港智能家宽
+    - 台湾智能家宽
+    - 美国智能家宽
+    - 新国智能家宽
+    - 日本智能家宽
+    - 韩国智能家宽
+    icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/Meta.png
     hidden: false
 - select:
     name: Google
@@ -207,23 +224,6 @@ policy_groups:
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/X.png
     hidden: false
 - select:
-    name: Threads
-    policies:
-    - 香港智能优选
-    - 台湾智能优选
-    - 美国智能优选
-    - 新国智能优选
-    - 日本智能优选
-    - 韩国智能优选
-    - 香港智能家宽
-    - 台湾智能家宽
-    - 美国智能家宽
-    - 新国智能家宽
-    - 日本智能家宽
-    - 韩国智能家宽
-    icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/Threads.png
-    hidden: false
-- select:
     name: GitHub
     policies:
     - 香港智能优选
@@ -239,40 +239,6 @@ policy_groups:
     - 日本智能家宽
     - 韩国智能家宽
     icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/GitHub.png
-    hidden: false
-- select:
-    name: Instagram
-    policies:
-    - 香港智能优选
-    - 台湾智能优选
-    - 美国智能优选
-    - 新国智能优选
-    - 日本智能优选
-    - 韩国智能优选
-    - 香港智能家宽
-    - 台湾智能家宽
-    - 美国智能家宽
-    - 新国智能家宽
-    - 日本智能家宽
-    - 韩国智能家宽
-    icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/Instagram.png
-    hidden: false
-- select:
-    name: FaceBook
-    policies:
-    - 香港智能优选
-    - 台湾智能优选
-    - 美国智能优选
-    - 新国智能优选
-    - 日本智能优选
-    - 韩国智能优选
-    - 香港智能家宽
-    - 台湾智能家宽
-    - 美国智能家宽
-    - 新国智能家宽
-    - 日本智能家宽
-    - 韩国智能家宽
-    icon: https://raw.githubusercontent.com/wayref/Egern-Icons/main/Color/Facebook.png
     hidden: false
 - select:
     name: 国外网盘
@@ -488,27 +454,15 @@ rules:
     update_interval: 86400
     disabled: false
 - rule_set:
-    name: Instagram
-    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/Instagram.yaml
-    policy: Instagram
-    update_interval: 86400
-    disabled: false
-- rule_set:
-    name: FaceBook
-    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/FaceBook.yaml
-    policy: FaceBook
-    update_interval: 86400
-    disabled: false
-- rule_set:
-    name: Threads
-    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/Threads.yaml
-    policy: Threads
-    update_interval: 86400
-    disabled: false
-- rule_set:
     name: GitHub
     match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Repcz/GitHub.yaml
     policy: GitHub
+    update_interval: 86400
+    disabled: false
+- rule_set:
+    name: Meta
+    match: https://raw.githubusercontent.com/wayref/Egern-Rule-Set/main/Meta.yaml
+    policy: Meta
     update_interval: 86400
     disabled: false
 - rule_set:
